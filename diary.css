@@ -1,0 +1,149 @@
+/* General Styling */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a subtle pattern overlay */
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/white-diamond.png');
+  opacity: 0.2; /* Adjust transparency for subtlety */
+  z-index: -1;
+}
+
+
+
+
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #4A90E2;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  box-shadow: 0px 4px 10px rgba(74, 144, 226, 0.3);
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  color: white;
+  background: #4A90E2;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease,transform 0.2s ease;
+}
+
+.button:hover {
+  background: #357ABD;
+  transform: scale(1.05);
+}
+
+.entries {
+  margin-top: 20px;
+}
+
+.entry {
+  background: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #4A90E2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-out;
+  position: relative;
+}
+
+.entry p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.entry button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #FF6B6B;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.entry button:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* @keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(-30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+} */
